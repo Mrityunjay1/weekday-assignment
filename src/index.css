@@ -1,0 +1,67 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.weekday-date-range-picker {
+  @apply font-sans max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden;
+}
+
+.calendars {
+  @apply p-4;
+}
+
+.calendar {
+  @apply mb-4;
+}
+
+.calendar-header {
+  @apply text-center mb-4;
+}
+
+.calendar-header h2 {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.calendar-grid {
+  @apply grid grid-cols-7 gap-2;
+}
+
+.calendar-day-header {
+  @apply text-center font-medium text-gray-500 text-sm py-2;
+}
+
+.calendar-day {
+  @apply w-10 h-10 flex items-center justify-center rounded-full text-sm focus:outline-none transition-colors duration-200;
+}
+
+.calendar-day:not(.disabled):hover {
+  @apply bg-primary/10;
+}
+
+.calendar-day.selected {
+  @apply bg-primary text-primary-foreground;
+}
+
+.calendar-day.disabled {
+  @apply text-gray-300 cursor-not-allowed;
+}
+
+.calendar-navigation {
+  @apply flex justify-between items-center mb-4;
+}
+
+.calendar-navigation button {
+  @apply px-3 py-1 rounded text-sm bg-gray-100 hover:bg-gray-200 transition-colors duration-200;
+}
+
+.calendar-navigation span {
+  @apply text-lg font-medium text-gray-700;
+}
+
+.predefined-ranges {
+  @apply p-4 bg-gray-50 border-t border-gray-200;
+}
+
+.predefined-ranges button {
+  @apply w-full text-left px-4 py-2 rounded text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200 mb-2 last:mb-0;
+}
